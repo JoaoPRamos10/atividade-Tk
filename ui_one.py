@@ -5,14 +5,14 @@ def salvar_nome():
     endereco = entry_endereco.get()
     if nome and endereco:
         with open("nomes-enderecos.txt", "a") as arquivo:
-            arquivo.write(nome + "\n")
-            arquivo.write(endereco + "\n")
+            arquivo.write(f"Nome: {nome} \n")
+            arquivo.write(f"Endereço: {endereco}\n")
         label_status.config(text=f'Nome "{nome}" e Endereço "{endereco}" salvos com sucesso!', fg="green")
     else:
         label_status.config(text="Digite os dados.", fg="red") 
 root = tk.Tk()
 root.title("Lista de nomes e endereços")
-root.geometry("600x300")
+root.geometry("300x200")
 
 label_instrucao = tk.Label(root, text="Digite um nome:")
 label_instrucao.pack(pady=10)
