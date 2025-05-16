@@ -9,7 +9,7 @@ def conectar_db():
         host="localhost",
         user="root",
         password="",
-        database="controle_visitantes"  # Altere para o nome do seu banco
+        database="controle_visitantes" 
     )
 
 def inserir_visitante():
